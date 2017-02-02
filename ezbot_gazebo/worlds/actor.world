@@ -1,52 +1,13 @@
 <?xml version="1.0" ?>
-<sdf version="1.6">
-  <!-- We use a custom world for the rrbot so that the camera angle is launched correctly -->
-
+<sdf version="1.5">
   <world name="default">
     <include>
       <uri>model://ground_plane</uri>
     </include>
-
-    <!-- Global light source -->
+    <!-- A global light source -->
     <include>
       <uri>model://sun</uri>
     </include>
-
-    <light name='dir_light' type='directional'>
-      <cast_shadows>1</cast_shadows>
-      <pose frame=''>0 0 10 0 -0 0</pose>
-      <diffuse>0.8 0.8 0.8 1</diffuse>
-      <specular>0.1 0.1 0.1 1</specular>
-      <attenuation>
-        <range>1000</range>
-        <constant>0.9</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
-      </attenuation>
-      <direction>-0.5 0.5 -1</direction>
-    </light>
-
-    <light name='user_directional_light_0' type='directional'>
-      <pose frame=''>0.487504 -0.431868 1 0 -0 0</pose>
-      <diffuse>0.5 0.5 0.5 1</diffuse>
-      <specular>0.1 0.1 0.1 1</specular>
-      <direction>0.1 0.1 -0.9</direction>
-      <attenuation>
-        <range>20</range>
-        <constant>0.5</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
-      </attenuation>
-      <cast_shadows>1</cast_shadows>
-    </light>
-    
-    <!-- Focus camera on tall penduluma -->
-    <gui fullscreen='0'>
-    <camera name='user_camera'>
-    <pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
-    <view_controller>orbit</view_controller>
-  </camera>
-  </gui>
     <actor name="actor">
       <skin>
         <filename>walk.dae</filename>
@@ -66,151 +27,151 @@
           <!-- back and forth -->
           <waypoint>
             <time>0.0</time>
-            <pose>1.000000 5.500000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>6.000000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>0.5</time>
-            <pose>1.000000 5.492404 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.984808 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>1.0</time>
-            <pose>1.000000 5.469846 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.939693 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>1.5</time>
-            <pose>1.000000 5.433013 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.866025 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>2.0</time>
-            <pose>1.000000 5.383022 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.766044 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>2.5</time>
-            <pose>1.000000 5.321394 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.642788 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>3.0</time>
-            <pose>1.000000 5.250000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.500000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>3.5</time>
-            <pose>1.000000 5.171010 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.342020 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>4.0</time>
-            <pose>1.000000 5.086824 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.173648 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>4.5</time>
-            <pose>1.000000 5.000000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.000000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>5.0</time>
-            <pose>1.000000 4.913176 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.826352 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>5.5</time>
-            <pose>1.000000 4.828990 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.657980 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>6.0</time>
-            <pose>1.000000 4.750000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.500000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>6.5</time>
-            <pose>1.000000 4.678606 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.357212 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>7.0</time>
-            <pose>1.000000 4.616978 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.233956 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>7.5</time>
-            <pose>1.000000 4.566987 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.133975 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>8.0</time>
-            <pose>1.000000 4.530154 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.060307 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>8.5</time>
-            <pose>1.000000 4.507596 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.015192 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>9.0</time>
-            <pose>1.000000 4.500000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.000000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>9.5</time>
-            <pose>1.000000 4.507596 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.015192 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>10.0</time>
-            <pose>1.000000 4.530154 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.060307 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>10.5</time>
-            <pose>1.000000 4.566987 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.133975 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>11.0</time>
-            <pose>1.000000 4.616978 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.233956 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>11.5</time>
-            <pose>1.000000 4.678606 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.357212 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>12.0</time>
-            <pose>1.000000 4.750000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.500000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>12.5</time>
-            <pose>1.000000 4.828990 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.657980 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>13.0</time>
-            <pose>1.000000 4.913176 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>4.826352 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>13.5</time>
-            <pose>1.000000 5.000000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.000000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>14.0</time>
-            <pose>1.000000 5.086824 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.173648 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>14.5</time>
-            <pose>1.000000 5.171010 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.342020 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>15.0</time>
-            <pose>1.000000 5.250000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.500000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>15.5</time>
-            <pose>1.000000 5.321394 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.642788 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>16.0</time>
-            <pose>1.000000 5.383022 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.766044 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>16.5</time>
-            <pose>1.000000 5.433013 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.866025 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>17.0</time>
-            <pose>1.000000 5.469846 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.939693 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>17.5</time>
-            <pose>1.000000 5.492404 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>5.984808 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
           <waypoint>
             <time>18.0</time>
-            <pose>1.000000 5.500000 2.000000 0.000000 -1.570796 1.570796</pose>
+            <pose>6.000000 -1.000000 0.200000 0.000000 -1.570796 0.000000</pose>
           </waypoint>
 
           <!-- circle -->

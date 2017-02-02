@@ -67,6 +67,7 @@
 
   <!-- Middle Link -->
   <link name="link2">
+    <selfCollide>true</selfCollide>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -102,6 +103,7 @@
 
   <!-- Top Link -->
   <link name="link3">
+    <selfCollide>true</selfCollide>
     <collision>
       <origin xyz="0 0 0" rpy="1.5707 0 0"/>
       <geometry>
@@ -133,10 +135,12 @@
     <origin xyz="0 0 ${cylradius2+camera_link/2}" rpy="0 0 0"/>
     <parent link="link3"/>
     <child link="camera_link"/>
+
   </joint>
 
   <!-- Camera -->
   <link name="camera_link">
+    <selfCollide>true</selfCollide>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -162,10 +166,10 @@
   <transmission name="tran1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint1">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor1">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -173,10 +177,10 @@
   <transmission name="tran2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint2">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor2">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
